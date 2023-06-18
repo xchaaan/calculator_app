@@ -10,40 +10,41 @@
     <div class="container">
         <div class="calculator-body">
             <div class="calculator-display">
-                <span class="result">0</span>
+                <span class="result" id="result">0</span>
             </div>
             <div class="calculator-buttons">
                 <div class="button-column">
-                    <button class="btn-utility">C</button>
-                    <button class="btn-utility">+/-</button>
+                    <button class="btn-utility" id="clear" onclick="clearDisplay()">AC</button>
+                    <button class="btn-utility" onclick="negate()">+/-</button>
                     <button class="btn-utility">%</button>
-                    <button class="btn operator">÷</button>
+                    <button class="btn operator" onclick="setOperator('/')">÷</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn number">7</button>
-                    <button class="btn number">8</button>
-                    <button class="btn number">9</button>
-                    <button class="btn operator">×</button>
+                    <button class="btn number" onclick="setValue('7')">7</button>
+                    <button class="btn number" onclick="setValue('8')">8</button>
+                    <button class="btn number" onclick="setValue('9')">9</button>
+                    <button class="btn operator" onclick="setOperator('*')">×</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn number">4</button>
-                    <button class="btn number">5</button>
-                    <button class="btn number">6</button>
-                    <button class="btn operator">-</button>
+                    <button class="btn number" onclick="setValue('4')">4</button>
+                    <button class="btn number" onclick="setValue('5')">5</button>
+                    <button class="btn number" onclick="setValue('6')">6</button>
+                    <button class="btn operator" onclick="setOperator('-')">-</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn number">1</button>
-                    <button class="btn number">2</button>
-                    <button class="btn number">3</button>
-                    <button class="btn operator">+</button>
+                    <button class="btn number" onclick="setValue('1')">1</button>
+                    <button class="btn number" onclick="setValue('2')">2</button>
+                    <button class="btn number" onclick="setValue('3')">3</button>
+                    <button class="btn operator" onclick="setOperator('+')"">+</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn-zero number">0</button>
-                    <button class="btn number">.</button>
-                    <button class="btn operator">=</button>
+                    <button class="btn-zero number" onclick="setValue('0')">0</button>
+                    <button class="btn number" onclick="setDecimal()">.</button>
+                    <button class="btn operator" onclick="calculate()">=</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="calculator.js" language="javascript" type="text/javascript"></script>
 </body>
 </html>
