@@ -15,32 +15,32 @@
             <div class="calculator-buttons">
                 <div class="button-column">
                     <button class="btn-utility" id="clear" onclick="clearDisplay()">AC</button>
-                    <button class="btn-utility" onclick="negate()">+/-</button>
-                    <button class="btn-utility">%</button>
+                    <button class="btn-utility" onclick="addNegative()">+/-</button>
+                    <button class="btn-utility" onclick="setToPercentage()">%</button>
                     <button class="btn operator" onclick="setOperator('/')">÷</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn number" onclick="setValue('7')">7</button>
-                    <button class="btn number" onclick="setValue('8')">8</button>
-                    <button class="btn number" onclick="setValue('9')">9</button>
+                    <button class="btn number" onclick="updateDisplay('7')">7</button>
+                    <button class="btn number" onclick="updateDisplay('8')">8</button>
+                    <button class="btn number" onclick="updateDisplay('9')">9</button>
                     <button class="btn operator" onclick="setOperator('*')">×</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn number" onclick="setValue('4')">4</button>
-                    <button class="btn number" onclick="setValue('5')">5</button>
-                    <button class="btn number" onclick="setValue('6')">6</button>
+                    <button class="btn number" onclick="updateDisplay('4')">4</button>
+                    <button class="btn number" onclick="updateDisplay('5')">5</button>
+                    <button class="btn number" onclick="updateDisplay('6')">6</button>
                     <button class="btn operator" onclick="setOperator('-')">-</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn number" onclick="setValue('1')">1</button>
-                    <button class="btn number" onclick="setValue('2')">2</button>
-                    <button class="btn number" onclick="setValue('3')">3</button>
+                    <button class="btn number" onclick="updateDisplay('1')">1</button>
+                    <button class="btn number" onclick="updateDisplay('2')">2</button>
+                    <button class="btn number" onclick="updateDisplay('3')">3</button>
                     <button class="btn operator" onclick="setOperator('+')"">+</button>
                 </div>
                 <div class="button-column">
-                    <button class="btn-zero number" onclick="setValue('0')">0</button>
-                    <button class="btn number" onclick="setDecimal()">.</button>
-                    <button class="btn operator" onclick="calculate()">=</button>
+                    <button class="btn-zero number" onclick="updateDisplay('0')">0</button>
+                    <button class="btn number" onclick="addDecimal()">.</button>
+                    <button class="btn operator" onclick="calculate(true)">=</button>
                 </div>
             </div>
         </div>
